@@ -37,7 +37,7 @@ header{
     color: black;
 }
 .nav-list{
-    
+    display: flex inline;
     margin-right: 186px;
     margin-left: 186px;
 }
