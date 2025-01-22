@@ -17,6 +17,9 @@ header{
 .banner{
     max-width: 1160px; 
 }
+.icon{
+    display: none;
+}
 .navbar{
     display: flex inline;
     justify-content: space-evenly;
@@ -146,7 +149,7 @@ margin-top: 86px;
 .sec-1{
     background-image: url(./assets/bg.png);
     max-width: 1440px;
-    height: 912px;
+    /* height: 912px; */
     margin: 0 auto;
 }
 .sec-1-h{
@@ -202,10 +205,19 @@ margin-left: auto;
     border-radius: 50px;
     margin-bottom: 60px;
 }
+ .arrow-right:hover{
+   background-color: aquamarine;
+}
+.arrow-left:hover{
+    background-color: aquamarine;
+}
 
 /* section-2 */
-
-
+marquee{
+    font-size: 20px ;
+    font-weight: bold;
+    color: darkcyan;
+}
 .sec-2-h{
     font-size: 46px;
     font-weight: bold;
@@ -214,8 +226,9 @@ margin-left: auto;
 }
 .sec-2{
     max-width: 1440px;
-    height: 1019px;
-     background-image: url(./assets/bg.png); 
+    /* height: 1019px; */
+     background-image:url(./assets/bg.png);
+
     background-image: linear-gradient( to bottom ,#FFFFFF, #fee6bb );
     margin-top: 60px;
     margin-right:  auto;
@@ -228,7 +241,7 @@ margin-left: auto;
     grid-template-columns: repeat(2 , 1fr);
     column-gap: 25px;
     width: 1160px;
-    height: auto;
+    /* height: auto; */
 margin-left: auto;
 margin-right: auto;
 }
@@ -255,10 +268,11 @@ margin-right: auto;
     font-size: 1rem;
     font-weight: bold;
     background-color: rgba(255, 255, 255, 1);
-    width: 290px;
-    height: 301px;
+   /* max-width: 290px; */
+    /* height: 301px; */
+    /* width: 100%; */
 }
-.img-1 ,.img-2, .img-3,.img-4,.img-5{
+ .img-1 ,.img-2, .img-3,.img-4,.img-5{ 
     border-top-right-radius: 16px;
     border-top-left-radius: 16px;
 
@@ -269,13 +283,15 @@ margin-right: auto;
 
 .story-sec-1{
     width: 540px;
-    height: 630px;
+    /* height: 630px; */
 column-gap: 20px;
 }
 .story-sec-2{
     display: grid;
     grid-template-columns: repeat(2 , 1fr);
-    width: 601px;height:622px;
+     width: 100%; 
+    /* max-width: 601px; */
+    /* max-height:622px; */
     column-gap: 20px;
     row-gap: 20px;
 
@@ -291,8 +307,9 @@ column-gap: 20px;
     font-size: 1rem;
     font-weight: 500px;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    margin-top: -50px;
-    margin-left: 60px;
+    position: relative;
+    top: -25px;
+    left: 20px;
 
 }
 .story-btn-2 , .story-btn-3 , .story-btn-4 , .story-btn-5{
@@ -305,8 +322,9 @@ column-gap: 20px;
     font-size: 1rem;
     font-weight: 500px;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    margin-top: -80px;
-    margin-left: 40px;
+    position: relative;
+    top: -25px;
+    left: 20px;
     
 }
 .sec-2-btn{
@@ -327,8 +345,9 @@ column-gap: 20px;
 }
 /* footer */
 footer{
-    width: 1439px;
-height: 512px;
+     display: flex; 
+   max-width: 1439px;
+ height: auto;
 background-color: rgba(1, 172, 253, 1);
 margin-left: auto;
 margin-right: auto; 
@@ -373,5 +392,90 @@ li{
     text-align: center;
     padding-top: 90px;
  width: 100%; 
+
+}
+/* media */
+
+@media screen and (max-width: 576px){
+    .nav-list , .nav-h , .nav-btn{
+display: none;
+    }
+    .icon{
+      display: block;  
+    }
+    .navbar{
+     border-bottom:1px solid  orange ;
+        justify-content: space-between;
+    
+    }
+    .banner{
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+    height: auto;
+        margin-left: 30px;
+justify-content: center;
+    }
+    .sec-2{
+        height: auto;
+
+    }
+    .cards{
+        flex-direction: column;
+        gap: 12px;
+
+margin-left: 30px;
+    }
+    .story-1{
+        display: none;
+    }
+    .story-sec-1{
+        display: none; 
+    }
+    .story-btn-2,.story-btn-3,.story-btn-4,.story-btn-5{
+        width: 75px;
+        margin-right: 50px;
+    }
+    .story-h-2,.story-h-3,.story-h-4,.story-h-5{
+        width: 127px;
+    }
+   .story-2 ,.story-3,.story-4,.story-5 {
+    width: 173px; 
+   }
+   
+   .img-2 ,.img-3,.img-4,.img-5{
+    width: 173px; height: 109px;
+   }
+    .story-sec-2{
+        grid-template-columns: repeat(2,1fr);
+       margin-left: 15px;
+       margin-right: auto;
+        margin-bottom: 40px;
+       max-width: 350px;   
+     width: 100%;
+    }
+        .all-f{ 
+            display: flex;
+            flex-direction: column ;
+            align-items: flex-start;
+            text-align: left;
+            margin-bottom: 20px;
+            margin-left: 30px;
+            margin-right: 10px;
+        }
+        .f-list{
+            align-items: start;
+            text-align: left;
+        }
+        .sec-2-btn{
+            display: none;
+        }
+        .arrows{
+            display: none;
+        }
+        footer{
+           max-height: 840px;
+    }
+    
 
 }
